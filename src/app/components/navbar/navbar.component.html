@@ -1,0 +1,16 @@
+<nav id="navbar">
+  <a class="logo" routerLink="/" rel="noopener noreferrer">
+   Home
+   </a>
+   <button class="navbar-toggler" (click)="toggle()" type="button">
+     <i class="fas fa-bars"></i>
+   </button>
+   
+ 
+ <div class="nav-content">
+   <a (click)="scrollToElement($home)"> HOME </a>
+   <a (click)="scrollToElement(about)"> About </a>
+   <a (click)="scrollToElement(portfolio)"> Proyects </a>
+   <a (click)="scrollToElement(form)"> Contact </a>
+ </div>
+</nav>
