@@ -18,6 +18,7 @@ export class navbarrComponent implements AfterViewInit {
     }else{
       const $title = document.querySelector(".logo")
       this.navbarTitle = localStorage.getItem("navbarTitle")
+      //animation
       this.toggle($title,"titleChange1")
       setTimeout(() => {
         this.toggle($title,"titleChange1")
