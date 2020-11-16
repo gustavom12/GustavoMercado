@@ -1,7 +1,7 @@
 .form 
     background: #252934
     color: #fff
-    height: 120vh
+    padding-bottom: 10vh
     .sobre
         display: none
     
@@ -18,6 +18,7 @@
             background: #252934
             border: 1px solid #ffffff
             margin-left: auto
+            transition: all 0.3s linear
     .botonn:hover
         transition: all 0.5s 
         background:  #04c2c9
@@ -36,7 +37,7 @@
             margin-bottom: 3px
             outline: none
             padding: 10px 15px
-            width: 500px
+            width: 600px
         .nombre
             margin-top: 6vh
             height: 38px
@@ -58,11 +59,10 @@
     background-color: #ffffff
 @media (max-width: 500px)
     .form
-        margin-top: 40vh
-        img
-            display: none
+        margin-top: 7vh
+        padding-top: 7
         .sobre
-            display: block
+            display: none
             width: 100%
             height: 23vh
             background-size: contain
@@ -70,8 +70,33 @@
     .formcontent
         .inputs
             input
-                width: 320px
+                width: 360px
         h2
             font-size: 30px
         h4
             font-size: 14px
+@media (max-width: 380px)
+    .formcontent
+        .inputs
+            input
+                width: 280px
+@media (max-width: 900px)
+    .form
+        padding-top: 7vh
+
+@media (min-width: 1100px)
+    .form
+        padding-top: 7vh
+        .formcontent
+            h4
+                font-size: 28px
+            .inputs
+                input
+                    font-size: 24px
+                    width: 800px
+        .botonn
+            width: 250px
+            font-size: 20px
+
+
+        

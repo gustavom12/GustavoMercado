@@ -1,25 +1,36 @@
 import {
   AfterViewInit,
   Component,
-  Host,
-  Input,
-  OnInit,
-  ViewChild,
+  HostListener
 } from '@angular/core';
-
+import{IntersectionObserverService} from "../../services/intersection-observer.service"
 @Component({
   selector: 'app-navbarr',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.sass'],
 })
 export class navbarrComponent implements AfterViewInit {
-  constructor() {}
-
-  toggle() {
-    const $navbarContent = document.querySelector('.nav-content');
-    $navbarContent.classList.toggle('active');
+  constructor(public observerS: IntersectionObserverService) {}
+  navbarTitle = "Home"
+  @HostListener('document: scroll')scroll(){
+    if(this.navbarTitle === localStorage.getItem("navbarTitle")){
+      return
+    }else{
+      const $title = document.querySelector(".logo")
+      this.navbarTitle = localStorage.getItem("navbarTitle")
+      this.toggle($title,"titleChange1")
+      setTimeout(() => {
+        this.toggle($title,"titleChange1")
+      }, 1000);
+      
+    }
   }
-
+  
+$navbarContent = document.querySelector('.nav-content');
+//set an animation and a className to a element
+  toggle(ToggleItem,className = 'active') {
+    ToggleItem.classList.toggle(className);
+  }
   scrollToElement(el) {
     el.scrollIntoView({
       behavior: 'smooth',

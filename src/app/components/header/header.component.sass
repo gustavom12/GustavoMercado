@@ -19,11 +19,11 @@ $maincolor: #1425a3
         margin-left: 5%
         width: 35%
         position: relative
-        top: -4vh
+        top: -2vh
         font-size: 50px
         text-align: left
         h3
-            margin-bottom: 30px
+            margin-bottom: 50px
             color: $maincolor
             font-weight: 500 
         p
@@ -37,7 +37,7 @@ $maincolor: #1425a3
         .boton
             display: block
             color: #ffffff
-            margin-top: 50px
+            margin-top: 70px
             margin-right: auto
             margin-left: 0
             border-radius: 22px
@@ -47,6 +47,9 @@ $maincolor: #1425a3
             width: 210px
             border: none
             padding: 10px
+            transition: all 0.3s linear
+            a
+                color: #ffffff
         .boton:hover 
             background-color: #10026b
             color: #ffffff
@@ -72,7 +75,7 @@ $maincolor: #1425a3
     align-items: center
     border: none
     position: absolute
-    margin-left: 94%
+    right: 5px
     margin-bottom: 7vh
     ::before
         font-size: 25px
@@ -87,6 +90,7 @@ $maincolor: #1425a3
         width: 55px
         display: flex
         text-decoration: none
+        transition: all 0.3s linear
     .fa-instagram:hover
         background: #ff8839  
         text-decoration: none
@@ -116,13 +120,15 @@ $maincolor: #1425a3
     align-items: center
 
 
+
+
 @media (max-width: 500px)
     .header
         img
-            width: 300px
-            top: 180px
-            right: -80px
-            display: none
+            //width: 300px
+            //top: 180px
+            //right: -80px
+            //display: none
         .footer
             margin-left: 81%
         .text-header
@@ -137,5 +143,38 @@ $maincolor: #1425a3
                 font-size: 25px
             p
                 font-size: 17px
-        
+@media (max-width: 900px)
+    .header
+        img
+            top: 130px
+            left: 0
+            width: 550px
+            height: auto
 
+@media (min-width: 1100px)
+    .header
+        .text-header
+            font-size: 60px
+            p
+                font-size: 24px
+            h3
+                font-size: 40px
+                margin-bottom: 0
+            .nombre
+                font-size: 65px
+                margin-top: 0
+            .boton
+                font-size: 28px
+                width: 60%
+                margin-top: 10vh
+        img 
+            top: 10px
+            width: 800px
+            left: 0
+
+@media (max-width: 319px)
+    .header
+        .text-header
+            top: 0
+            //h3
+                //margin-bottom: 0px
