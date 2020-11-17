@@ -55,7 +55,7 @@ $navbarContent = document.querySelector('.nav-content');
     let sticky = navbar.offsetTop;
 
     function myFunction() {
-      if (window.pageYOffset >= sticky + 10) {
+      if (window.pageYOffset >= sticky + 1) {
         navbar.classList.add('sticky');
       } else {
         navbar.classList.remove('sticky');
