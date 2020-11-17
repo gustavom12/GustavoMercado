@@ -16,16 +16,19 @@ export class AboutComponent implements AfterViewInit {
    barwidth = (entry:any)=> {
      if(entry === "none"|| !entry[0].isIntersecting)return
      console.log(entry)
-    const $width100 = document.querySelector(".fill100"), 
+    const bar = document.querySelector(".bar"),
+    nameofbar = document.querySelector(".nameofbar"),
+    Namewidth = getComputedStyle(nameofbar).width,
+    widdth = getComputedStyle(bar).width,
     //first bar (100%width)
-    width = getComputedStyle($width100).width,
+    width =  Number(widdth.replace("px","")) - Number(Namewidth.replace("px","")),
     $fill = document.querySelectorAll(".fill"),
     dataf = document.querySelectorAll("[data-barWidth]")
-    $width100.classList.add("widthAnimation")
+    console.log(Number(widdth.replace("px","")), Number(Namewidth.replace("px","")))
     console.log(width,380 / 100 * 50)   
     dataf.forEach((el:any)=>{
       //Width animation
-      const x = parseFloat(width) / 100 * parseFloat(el.dataset.barwidth)
+      const x = width / 100 * parseFloat(el.dataset.barwidth)
       let i = 0
       function increment(){
         if(i >= x) return;

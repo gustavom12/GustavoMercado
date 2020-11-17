@@ -1,7 +1,7 @@
 $maincolor: #1425a3
     
 .header
-    height: 91vh
+    min-height: 91vh
     width: 100%
     color: #000000
     display: flex
@@ -29,6 +29,7 @@ $maincolor: #1425a3
         p
             font-size: 20px
             margin-top: 30px
+            width: 90%
         .nombre
             font-size: 50px
             font-weight: bold
@@ -58,7 +59,7 @@ $maincolor: #1425a3
 .footer .fa-instagram:hover::before
     transition: all .2s ease-in-out
     transform: scale(1.2)
-.footer .fa-facebook:hover::before
+.footer .fa-github:hover::before
     transition: all .2s ease-in-out
     transform: scale(1.2)
 .footer .fa-envelope:hover::before
@@ -99,7 +100,7 @@ $maincolor: #1425a3
 
  
         
-    .fa-facebook:hover
+    .fa-github:hover
         background: #007bff  
         text-decoration: none
         transition: all .4s linear
@@ -119,10 +120,16 @@ $maincolor: #1425a3
     justify-content: center
     align-items: center
 
+@media (max-width: 400px)
+    .header
+        .text-header
+            h3
+                font-size: 20px
+            p
+                font-size: 17px
 
 
-
-@media (max-width: 500px)
+@media (max-width: 600px)
     .header
         img
             //width: 300px
@@ -139,10 +146,13 @@ $maincolor: #1425a3
                 bottom: 30px
             .nombre
                 font-size: 38px
+                margin-bottom: 10px
             h3
-                font-size: 25px
+                font-size: 24px
+                margin-bottom: 5px
             p
-                font-size: 17px
+                font-size: 21px
+                margin-top: 10px
 @media (max-width: 900px)
     .header
         img

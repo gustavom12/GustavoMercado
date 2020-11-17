@@ -9,8 +9,6 @@ export class IntersectionObserverService {
   func (entries = []){
     let title = "Home"
     entries.forEach(el => {
-      console.log(entries)
-      console.log(el.target.classList[0] === "about")
       //Change the navbar title when the element is in the view
       if(el.isIntersecting && el.target.classList[0] === "header")title = "Home"
       if(el.isIntersecting && el.target.classList[0] === "quiensoy")title = "Sobre mí"
