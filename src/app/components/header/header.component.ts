@@ -14,11 +14,20 @@ export class HeaderComponent implements AfterViewInit {
   constructor(private observerS: IntersectionObserverService) { }
     
 
-  
+  form
 
   ngAfterViewInit(): void {
     const $header = document.querySelector(".header")
     this.observerS.setobs($header,"Contact")
+    this.form = document.querySelector('.form');
+  }
+
+  scrollToElement(el) {
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
   }
 
 }

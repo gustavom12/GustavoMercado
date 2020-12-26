@@ -8,6 +8,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { FormComponent } from './components/form/form.component';
 import { AppComponent } from './components/main-component/app.component';
+import { InfoComponent } from './components/portfolio/info/info.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppComponent } from './components/main-component/app.component';
     HeaderComponent,
     navbarrComponent,
     PortfolioComponent,
-    FormComponent
+    FormComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

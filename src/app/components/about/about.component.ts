@@ -34,7 +34,7 @@ export class AboutComponent implements AfterViewInit {
         if(i >= x) return;
         i++
         el.style.width = `${i}px`
-        setTimeout(()=>increment(),12)
+        setTimeout(()=>increment(),8)
       }
       increment()
     })
