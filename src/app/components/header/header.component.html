@@ -1,27 +1,48 @@
 <div class="header">
   <div class="nav">
     <div class="text-header" data-aos-duration="1300" data-aos="zoom-in">
-      <h3>Gustavo Mercado</h3>
+      <h3 class="w-100 mb-4">Gustavo Mercado</h3>
       <h2 class="nombre">WEB Developer</h2>
       <p>
-        Soy un desarrollador WEB, con casi un año en estudios en Programación
-        y desarrollo WEB, principalmente Front-End, en busqueda activa de trabajo
+        Soy un desarrollador WEB, con más de un año y medio de estudios en Programación
+        y desarrollo WEB FullStack, en busqueda activa de trabajo
       </p>
-      <button class="boton" (click)="scrollToElement(form)">
+      <!-- <button class="boton" (click)="scrollToElement(form)">
         <a>
           Contáctame
         </a>
-      </button>
+      </button> -->
+      <a (click)="scrollToElement(form)" (mouseover)="buttonHover()" (mouseleave)="buttonNotHover()" class="cta mb-2">
+        <span>Contáctame</span>
+        <i class="ml-2 fas fa-arrow-right" id="arrow"></i>
+      </a>
       <img src="https://i.ibb.co/Q8FTSZK/fondo.png"
-       alt="img"
-       class="d-none d-md-block"
-       />
+        alt="img"
+        class="d-none d-md-block"
+      />
     </div>
   </div>
   <div class="footer">
-    <a href="https://www.instagram.com/gustavo_mercado13/" target="_blank" class="fab fa-instagram flex"></a>
-    <a href="https://github.com/gustavom12" target="_blank" class="fab fa-github flex"></a>
-    <a href="#" class="fab far fa-envelope flex" aria-hidden="true"></a>
-    <a href="https://api.whatsapp.com/send?phone=542994107678" target="_blank" class="fab fa-whatsapp flex"></a>
+    <a href="https://www.instagram.com/gustavo_mercado13/" class="btn btn-1 fab fa-instagram flex">
+      <svg>
+        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+      </svg>
+    </a>
+    <!-- <a href="https://www.instagram.com/gustavo_mercado13/" target="_blank" class="fab fa-instagram flex"></a> -->
+    <a href="https://github.com/gustavom12" class="btn btn-1 fab fa-github flex">
+      <svg>
+        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/gustavo-mercado-1836461a4/" class="btn btn-1 fab fa-linkedin flex">
+      <svg>
+        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+      </svg>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=542994107678" class="btn btn-1 fab fa-whatsapp flex">
+      <svg>
+        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+      </svg>
+    </a>
   </div>
 </div>

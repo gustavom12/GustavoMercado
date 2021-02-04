@@ -5,12 +5,13 @@ $fontTitle: 'Roboto Slab', serif
     margin: 0
     padding-top: 10px
     margin-top: 7vh
-  
-.hr25 
+    margin-bottom: 10vh
+
+.hr25
     height: 1px
     width: 25%
     background-color: black
-    margin-bottom: 12vh 
+    margin-bottom: 12vh
 
 .portfolio-h2
     margin-top: 10vh
@@ -20,9 +21,12 @@ $fontTitle: 'Roboto Slab', serif
 
 .card
     background: #000000
-    height: 45vh
+    height: 300px
     cursor: pointer
     width: 100%
+    background-position-x: center
+    background-position-y: top
+    background-size: cover
     .hover
         opacity: 0
         visibility: hidden
@@ -32,7 +36,9 @@ $fontTitle: 'Roboto Slab', serif
         text-align: center
         width: 100%
         height: 100%
-        transition: all 0.7s linear 
+        transition: all 0.7s linear
+        .texthover
+            min-height: 70%
         a
             padding: 18px 33px
             width: 35%
@@ -42,26 +48,9 @@ $fontTitle: 'Roboto Slab', serif
             background: #ffffff
             font-weight: 500
             position: relative
-            top: 135px
+            margin-top: 20px
             text-decoration: none
             transition: all linear 0.4s
-        a.info
-            display: block
-            margin: 0 auto
-            margin-bottom: 35px
-            display: flex
-            justify-content: center
-            align-items: center
-            padding: 15px 20px
-            width: 15%
-            font-size: 1rem
-            height: 30px
-            background: #343425
-            color: #ffffff
-            border: 1px solid #ffffff
-        a.info:hover
-            background: #ffffff
-            color: #252934 
         a:hover
             transition: all linear 0.4s
             transform: scale(1.1)
@@ -84,26 +73,7 @@ $fontTitle: 'Roboto Slab', serif
     .InfoContent
         background: #ffffff
         margin: 0 5%
-                
-.card3
-    background-image: url(https://i.ibb.co/WkjScvR/mar-Captura.png)
-    background-size: cover
-    width: 500px
-    height: 324px
-    margin-top: 30px
-    margin-bottom: 120px
-    .hovercard3
-        h6
-            margin-top: 10px
-            font-family: $fontTitle
-        a
-            top: 80px
 
-
-.card3:hover .hovercard3
-    visibility: visible
-    opacity: 1
-    transition: opacity 0.6s linear
 .portfolio
     margin-left: 3%
     margin-right: 3%
@@ -112,11 +82,13 @@ $fontTitle: 'Roboto Slab', serif
     grid-template-columns: 1fr 1fr
     grid-column-gap: 20px
     .card1
-        background-image: url(../../../assets/imgs/TMDB.png)
-        background-size: cover
+        background-image: url(https://i.ibb.co/NL4GfGH/TMDB.png)
     .card2
         background-image: url(https://i.ibb.co/b1S0Jvc/poke1.png)
-        background-size: cover
+    .card3
+        background-image: url(https://i.ibb.co/WkjScvR/mar-Captura.png)
+    .card4
+        background-image: url(https://i.ibb.co/9wzTFVQ/freestyl.png)
     .card1:hover .hovercard1
         visibility: visible
         opacity: 1
@@ -125,31 +97,45 @@ $fontTitle: 'Roboto Slab', serif
         visibility: visible
         opacity: 1
         transition: opacity 0.6s linear
+    .card3:hover .hovercard3
+        visibility: visible
+        opacity: 1
+        transition: opacity 0.6s linear
     .card4:hover .hovercard4
         visibility: visible
         opacity: 1
-        transition: opacity 0.6s linear 
+        transition: opacity 0.6s linear
 
-@media (max-width: 620px)
+@media (max-width: 800px)
     .portfolio
         grid-template-columns: 1fr
         height: auto
         .card
             margin-top: 20px
-            height: 40vh
+            height: 370px
             .hover
                 a
-                    top: 75px
-    .card3
-        margin-top: 20px
-        margin-left: 3%
-        margin-right: 3%
-        height: 40vh
-        width: 94%  
-        .hovercard3
-            a
-                top: 30px
+                    margin-top: 10px
+
+@media (max-width: 440px)
+  .portfolio
+        .card
+            margin-top: 20px
+            height: 210px
+            .hover
+                h2
+                    font-size: 22px
+                h4
+                    font-size: 18px
+                h6
+                    font-size: 16px
+                    margin-top: 10px !important
+            .hover
+                a
+                    margin-top: 10px
+                    padding: 18px 33px
+                    font-size: 1rem
+                    height: 25px
 @media (min-width: 1100px)
-    .portfolio-h2    
+    .portfolio-h2
         font-size: 50px
-        

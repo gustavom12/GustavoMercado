@@ -23,10 +23,10 @@ export class navbarrComponent implements AfterViewInit {
       setTimeout(() => {
         this.toggle($title,"titleChange1")
       }, 1000);
-      
+
     }
   }
-  
+
 $navbarContent = document.querySelector('.nav-content');
 //set an animation and a className to a element
   toggle(ToggleItem,className = 'active') {
@@ -35,8 +35,8 @@ $navbarContent = document.querySelector('.nav-content');
   scrollToElement(el) {
     el.scrollIntoView({
       behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
+      block: 'center',
+      inline: 'center',
     });
   }
   $home;
@@ -45,9 +45,9 @@ $navbarContent = document.querySelector('.nav-content');
   form;
   ngAfterViewInit(): void {
     this.$home = document.querySelector('.header');
-    this.about = document.querySelector('.about');
-    this.portfolio = document.querySelector('.portfolio');
-    this.form = document.querySelector('.form');
+    this.about = document.querySelector('#about');
+    this.portfolio = document.querySelector('#portfolio');
+    this.form = document.querySelector('#form');
     window.onscroll = function () {
       myFunction();
     };

@@ -1,5 +1,5 @@
 //About
-.hr100 
+.hr100
     display: none
 
 .abouth2
@@ -7,12 +7,12 @@
     text-align: center
     margin-top: 7vh
 
-.hr25 
+.hr25
   height: 1px
   width: 25%
   background-color: black
 
-.about 
+.about
     display: flex
     justify-content: center
     align-items: center
@@ -25,11 +25,15 @@
         width: 90%
         text-align: center
         margin: 0 50px 0 50px
+        p
+            font-family: 'Roboto Slab', serif
+            font-size: 17px
+            color: #414141
         img
             width: 250px
             height: 280px
             border-radius: 50%
-            
+
 
     .bars
         width: 100%
@@ -60,14 +64,14 @@
                 position: absolute
                 z-index: 10
                 margin-left: 92%
-                margin-right: 90px  
+                margin-right: 90px
                 .aprendiendo
                     position: absolute
-                    right: 15px  
+                    right: 15px
                     color: #c4c4c472
             .nameofbar
                 height: 100%
-                width: 120px
+                width: 110px
                 background: #04c2c9
                 text-align: center
                 color: white
@@ -83,37 +87,37 @@
                 background-color: #00a1a7
             .fill100
                 background: #ffffff
-                
+
 @media (max-width: 600px)
     .about
         flex-direction: column
-        
+
         img
             width: 300px
             height: 300px
-    .about .bars .bar .nameofbar
-            width: 80px
-            font-size: 18px
     .bars
         padding: 20px
         margin-right: 0px !important
-        h2 
+        h2
             margin-top: 8vh
             font-size: 35px !important
         .bar
-            span 
+            .nameofbar
+                width: 80px !important
+                font-size: 16px !important
+            span
                 margin-left: 79% !important
-                .aprendiendo 
+                .aprendiendo
                     display: none
-    .hr100 
+    .hr100
         display: block
         width: 100%
         margin-top: 50px
-@media (max-width: 900px)    
+@media (max-width: 900px)
     .about
         .bars
             .nameofbar
-                width: 100px !important
+                width: 100px
 
 @media (min-width: 1100px)
     .about
@@ -135,7 +139,7 @@
         width: 75%
 
 .widthAnimation
-    animation: width 3.5s linear 
+    animation: width 3.5s linear
     background: #00a1a7 !important
 
 .margin

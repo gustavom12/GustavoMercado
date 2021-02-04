@@ -3,14 +3,160 @@ body
     padding: 0
     margin: 0
     font-family: Raleway, sans-serif
+    background: #202a370c !important
+
+.animationStayAt100
+  animation-fill-mode: forwards !important
 
 .flex
     display: flex
     justify-content: center
     align-items: center
-    
+
+.hr25
+  margin-right: auto
+  margin-left: auto
+  height: 1px
+  width: 25%
+  background-color: black
+
+$color: #111
+$primary: #10026b
+$dark: #202a37
+.bgDark
+  background: $dark !important
+
+a
+  text-decoration: none
+  color: inherit
+.title
+  font-family: "raleway-bold"
+
+.cta
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  position: relative
+  margin: auto
+  transition: all .2s ease
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    border-radius: 28px
+    background: rgba($primary,.5)
+    width: 106px
+    height: 56px
+    transition: all .3s ease
+  span
+    position: relative
+    font-size: 16px
+    line-height: 18px
+    font-weight: 900
+    letter-spacing: .25em
+    text-transform: uppercase
+    vertical-align: middle
+  svg
+    position: relative
+    top: 0
+    margin-left: 10px
+    fill: none
+    stroke-linecap: round
+    stroke-linejoin: round
+    stroke: $color
+    stroke-width: 2
+    transform: translateX(-5px)
+    transition: all .3s ease
+  &:hover
+    &:before
+      width: 100%
+      background: rgba($primary,1)
+    svg
+      transform: rotate(90deg)
+      color: #ffffff
+  &:active
+    transform: scale(.96)
 
 
+
+//default button
+.btn
+  color: #fff
+  cursor: pointer
+  // display: block
+  font-size:16px
+  font-weight: 400
+  line-height: 45px
+  margin: 0 0 2em
+  max-width: 160px
+  position: relative
+  text-decoration: none
+  text-transform: uppercase
+  width: 100%
+
+//   @media(min-width: 400px)
+//     display: inline-block
+//     margin-right: 2.5em
+
+//     &:nth-of-type(even)
+//       margin-right: 0
+//
+//
+
+  @media(min-width: 600px)
+
+    margin: 0 1em 2em
+
+//     &:nth-of-type(even)
+//       margin-right: 2.5em
+//
+
+//     &:nth-of-type(5)
+//       margin-right: 0
+//
+
+
+
+  &:hover  text-decoration: none
+
+
+
+/////////////////////////////////
+//button one
+///////////////////////////////
+.btn-1
+  background: darken(#ff0000, 1.5%)
+  font-weight: 100
+
+  svg
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
+
+  rect
+    fill: none
+    stroke: #fff
+    stroke-width: 2
+    stroke-dasharray: 0, 310
+    transition: all 0.35s linear
+
+
+
+.btn-1:hover
+  background: rgba(#ff0000, 1)
+  letter-spacing: 1px
+
+  rect
+    stroke-width: 5
+    stroke-dasharray: 422, 0
+    stroke-dashoffset: 48
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1)
 
 
 

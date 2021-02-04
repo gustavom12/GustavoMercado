@@ -7,6 +7,7 @@ import{IntersectionObserverService} from "../../services/intersection-observer.s
   styleUrls: ['./about.component.sass']
 })
 export class AboutComponent implements AfterViewInit {
+
 @HostListener('window:resize')resize(){
   this.barwidth("none")
 }
@@ -15,31 +16,31 @@ export class AboutComponent implements AfterViewInit {
   //Set width of bar depending of the screen size
    barwidth = (entry:any)=> {
      if(entry === "none"|| !entry[0].isIntersecting)return
-     console.log(entry)
     const bar = document.querySelector(".bar"),
     nameofbar = document.querySelector(".nameofbar"),
     Namewidth = getComputedStyle(nameofbar).width,
     widdth = getComputedStyle(bar).width,
-    //first bar (100%width)
+    //100%
     width =  Number(widdth.replace("px","")) - Number(Namewidth.replace("px","")),
-    $fill = document.querySelectorAll(".fill"),
     dataf = document.querySelectorAll("[data-barWidth]")
-    console.log(Number(widdth.replace("px","")), Number(Namewidth.replace("px","")))
-    console.log(width,380 / 100 * 50)   
     dataf.forEach((el:any)=>{
       //Width animation
       const x = width / 100 * parseFloat(el.dataset.barwidth)
+      let percent = 0
       let i = 0
+      console.log(x)
       function increment(){
         if(i >= x) return;
         i++
         el.style.width = `${i}px`
-        setTimeout(()=>increment(),8)
+        // percent ++
+        // el.parentElement.querySelector("span").innerText = `${percent}%`
+        setTimeout(()=>increment(),7)
       }
       increment()
     })
     this.obs.disconnect()
-  } 
+  }
    obs = new IntersectionObserver(this.barwidth,{threshold: 0.6})
 
   ngAfterViewInit():void{

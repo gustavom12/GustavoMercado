@@ -1,59 +1,48 @@
 <h2 data-aos="fade-right" data-aos-duration="700"
- class="abouth2 ">ABOUT</h2>
+ class="abouth2 ">Habilidades</h2>
 <hr
   data-aos="fade-right"
   data-aos-duration="700"
   data-aos-delay="500"
   class="hr25"
 />
-<div class="about">
+<div class="about pb-5">
   <!-- ABOUT -->
 
-  <div class="quiensoy" data-aos-duration="1000" data-aos="fade-right">
-    <img src="https://i.ibb.co/bBVXMSM/about.jpg" alt="" />
-    <h2 >¿Quien soy?</h2>
-    <h5>
-      Soy un desarrollador Web Front-End de
-      <a
-        href="https://www.google.com/maps/place/Neuqu%C3%A9n/@-38.9411509,-68.255485,11z/data=!3m1!4b1!4m5!3m4!1s0x960a33ba35eb8e35:0x6220acb810e3e2f5!8m2!3d-38.9516784!4d-68.0591888"
-      >
-        Neuquen/Argentina</a
-      >
-    </h5>
-    <p>
-      Me considero una persona muy dedicada y detallista, 
-      con relativamente poca experiencia pero con muchos conocimientos
-    </p>
+  <div class="quiensoy" data-aos-duration="1000" data-aos="fade-up">
+    <div class="d-flex justify-content-around align-center">
+      <app-progresscircle [title]="'Autodidacto'" class="d-inline-block"  [width]="100"></app-progresscircle>
+      <app-progresscircle [title]="'Responsabilidad'" class="d-inline-block" [width]="90"></app-progresscircle>
+    </div>
+    <div class="d-flex justify-content-around align-center">
+      <app-progresscircle [title]="'Cooperación'" class="d-inline-block" [width]="80"></app-progresscircle>
+      <app-progresscircle [title]="'Versatilidad'" class="d-inline-block" [width]="65"></app-progresscircle>
+    </div>
+    <div class="d-flex justify-content-around align-center">
+      <app-progresscircle [title]="'Autodidacto'" class="d-inline-block" [width]="95"></app-progresscircle>
+      <app-progresscircle [title]="'Creatividad'" class="d-inline-block" [width]="50"></app-progresscircle>
+    </div>
+
+
   </div>
   <hr class="hr100 d-sm-block d-none d-md-none d-lg-none"/>
 
-  <div class="bars" data-aos-duration="1050" data-aos="fade-right">
-    <h2 class="text-center">Conocimientos</h2>
-    <hr class="hr" />
+  <div class="bars" data-aos-duration="1050" data-aos-delay="300" data-aos="fade-up">
+    <!-- <h2 class="text-center">Conocimientos</h2>
+    <hr class="hr mx-auto"/> -->
     <div class="barg">
       <div class="bar">
         <div class="nameofbar">HTML</div>
         <div
           class="fill"
-          data-barwidth="80%"
+          data-barwidth="85%"
         ></div>
-        <span>80%</span>
+        <span>85%</span>
       </div>
     </div>
     <div class="barg">
       <div class="bar">
         <div class="nameofbar" style="font-size: 17px">Javascript</div>
-        <div
-
-          class="fill"
-          data-barwidth="70%"
-        ></div>
-        <span>70%</span>
-      </div>
-    </div>
-    <div class="barg">
-      <div class="bar">
-        <div class="nameofbar">CSS</div>
         <div
 
           class="fill"
@@ -64,13 +53,24 @@
     </div>
     <div class="barg">
       <div class="bar">
+        <div class="nameofbar">CSS</div>
+        <div
+
+          class="fill"
+          data-barwidth="80%"
+        ></div>
+        <span>80%</span>
+      </div>
+    </div>
+    <div class="barg">
+      <div class="bar">
         <div class="nameofbar" style="font-size: 18px">Angular</div>
         <div
 
           class="fill"
-          data-barwidth="65%"
+          data-barwidth="75%"
         ></div>
-        <span>65%</span>
+        <span>75%</span>
       </div>
     </div>
     <div class="barg">
@@ -86,18 +86,18 @@
     </div>
     <div class="barg">
       <div class="bar">
-        <div class="nameofbar">jQuery</div>
+        <div class="nameofbar">React</div>
         <div
 
           class="fill"
-          data-barwidth="40%"
+          data-barwidth="25%"
         ></div>
-        <span>40%</span>
+        <span><span class="aprendiendo">(Aprendiendo)</span>25%</span>
       </div>
     </div>
     <div class="barg">
       <div class="bar">
-        <div class="nameofbar">WordPress</div>
+        <div class="nameofbar">MongoDB</div>
         <div
 
           class="fill"
@@ -112,6 +112,17 @@
         <div
 
           class="fill"
+          data-barwidth="60%"
+        ></div>
+        <span>60%</span>
+      </div>
+    </div>
+    <div class="barg">
+      <div class="bar">
+        <div class="nameofbar" style="font-size: 16px;">GraphQl</div>
+        <div
+
+          class="fill"
           data-barwidth="45%"
         ></div>
         <span><span class="aprendiendo">(Aprendiendo)</span> 45%</span>
@@ -119,3 +130,5 @@
     </div>
   </div>
 </div>
+
+

@@ -1,12 +1,13 @@
 $maincolor: #1425a3
-    
+
 .header
-    min-height: 91vh
+    min-height: 80vh
     width: 100%
     color: #000000
     display: flex
     justify-content: center
     align-items: center
+    margin-top: 25px
     img
         position: absolute
         z-index: 0
@@ -25,7 +26,7 @@ $maincolor: #1425a3
         h3
             margin-bottom: 50px
             color: $maincolor
-            font-weight: 500 
+            font-weight: 500
         p
             font-size: 20px
             margin-top: 30px
@@ -36,25 +37,38 @@ $maincolor: #1425a3
             font-weight: bold
             margin-bottom: 30px
             font-family: "Times New Roman", Times, serif
-        .boton
+        .cta
             display: block
-            color: #ffffff
             margin-top: 70px
             margin-right: auto
             margin-left: 0
             border-radius: 22px
-            background-color: $maincolor
+            //background-color: $maincolor
             font-size: 18px
             font-weight: 700
-            width: 210px
+            width: 65%
             border: none
             padding: 10px
+            padding-left: 25px
             transition: all 0.3s linear
-            a
-                color: #ffffff
-            a:hover
-                text-decoration: none
-        .boton:hover 
+        .fa-arrow-right
+          position: relative
+          top: 2px
+          color: #000000
+          transition: all 0.3s linear
+        #arrow.arrowdown
+          transition: all 0.3s linear
+          color: #ffffff
+          transform: rotate(90deg) !important
+          top: 5px
+        a
+            transition: all 0.3s linear
+            color: #10026b
+        a:hover
+            text-decoration: none
+            transition: all 0.6s linear
+            color: #ffffff
+        .boton:hover
             background-color: #10026b
             color: #ffffff
             transition: all 0.3s linear
@@ -65,7 +79,7 @@ $maincolor: #1425a3
 .footer .fa-github:hover::before
     transition: all .2s ease-in-out
     transform: scale(1.2)
-.footer .fa-envelope:hover::before
+.footer .fa-linkedin:hover::before
     transition: all .2s ease-in-out
     transform: scale(1.2)
 .footer .fa-whatsapp:hover::before
@@ -82,9 +96,9 @@ $maincolor: #1425a3
     right: 5px
     margin-bottom: 7vh
     ::before
-        font-size: 25px
+        font-size: 29px
         color: white
-    a 
+    a
         margin-top: 2px
         margin-bottom: 2px
         background: #202a37
@@ -96,36 +110,41 @@ $maincolor: #1425a3
         text-decoration: none
         transition: all 0.3s linear
     .fa-instagram:hover
-        background: #ff8839  
+        background: #ff8839
         text-decoration: none
         transition: all .4s linear
         transform: scale(1.1)
-
- 
-        
     .fa-github:hover
-        background: #007bff  
+        background: #007bff
         text-decoration: none
         transition: all .4s linear
         transform: scale(1.1)
-    .fa-envelope:hover
-        background: #aa0101  
+    .fa-linkedin:hover
+        background: #01d6cc
         text-decoration: none
         transition: all .4s linear
         transform: scale(1.1)
     .fa-whatsapp:hover
-        background: #00a300  
+        background: #00a300
         text-decoration: none
         transition: all .4s linear
-        transform: scale(1.1)      
+        transform: scale(1.1)
 .iconos
     display: flex
     justify-content: center
     align-items: center
 
 @media (max-width: 400px)
+    .cta
+      padding: 5px
+      span
+        font-size: 16px
+        letter-spacing: 0.10rem
     .header
         .text-header
+            width: 70% !important
+            padding-bottom: 30px
+            margin-right: 0 !important
             h3
                 font-size: 20px
             p
@@ -143,7 +162,8 @@ $maincolor: #1425a3
             margin-left: 81%
         .text-header
             width: 60%
-            margin-left: 7% 
+            margin-left: 7%
+            margin-right: 30%
             .boton
                 position: relative
                 bottom: 30px
@@ -157,12 +177,18 @@ $maincolor: #1425a3
                 font-size: 21px
                 margin-top: 10px
 @media (max-width: 900px)
+    .cta
+      width: 100% !important
     .header
         img
             top: 130px
             left: 0
             width: 550px
             height: auto
+
+@media (min-width: 990px)
+    .header
+        min-height: 90vh
 
 @media (min-width: 1100px)
     .header
@@ -180,7 +206,7 @@ $maincolor: #1425a3
                 font-size: 28px
                 width: 60%
                 margin-top: 10vh
-        img 
+        img
             top: 10px
             width: 800px
             left: 0
@@ -191,3 +217,4 @@ $maincolor: #1425a3
             top: 0
             //h3
                 //margin-bottom: 0px
+

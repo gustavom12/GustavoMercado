@@ -1,0 +1,16 @@
+<div class="container d-inline-flex justify-content-center align-center flex-column">
+  <h5 *ngIf="title" class="text-capitalize title text-center mx-auto"> {{title}} </h5>
+  <div class="row d-inline-block">
+      <div class="col-md-3 col-sm-6 mx-auto d-inline-block">
+          <div  class="progress blue d-inline-block">
+              <span class="progress-left " >
+                  <span class="progress-bar" #percent2></span>
+              </span>
+              <span class="progress-right " >
+                  <span class="progress-bar"#percent1></span>
+              </span>
+              <div class="progress-value">{{percentAnimation}}%</div>
+          </div>
+      </div>
+  </div>
+</div>

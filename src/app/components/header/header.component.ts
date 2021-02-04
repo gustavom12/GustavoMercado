@@ -12,21 +12,31 @@ declare var $:any;
 export class HeaderComponent implements AfterViewInit {
 
   constructor(private observerS: IntersectionObserverService) { }
-    
+
 
   form
 
   ngAfterViewInit(): void {
     const $header = document.querySelector(".header")
     this.observerS.setobs($header,"Contact")
-    this.form = document.querySelector('.form');
+    this.form = document.querySelector('#form');
+  }
+
+  buttonHover(){
+    const arrow = document.querySelector("#arrow")
+    arrow.classList.add("arrowdown")
+  }
+
+  buttonNotHover(){
+    const arrow = document.querySelector("#arrow")
+    arrow.classList.remove("arrowdown")
   }
 
   scrollToElement(el) {
     el.scrollIntoView({
       behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
+      block: 'center',
+      inline: 'center',
     });
   }
 

@@ -9,6 +9,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { FormComponent } from './components/form/form.component';
 import { AppComponent } from './components/main-component/app.component';
 import { InfoComponent } from './components/portfolio/info/info.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ConocimientosComponent } from './components/conocimientos/conocimientos.component';
+import { ProgresscircleComponent } from './components/progresscircle/progresscircle.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { InfoComponent } from './components/portfolio/info/info.component';
     navbarrComponent,
     PortfolioComponent,
     FormComponent,
-    InfoComponent
+    InfoComponent,
+    SkillsComponent,
+    ConocimientosComponent,
+    ProgresscircleComponent
   ],
   imports: [
     BrowserModule,
