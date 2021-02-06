@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-progresscircle',
   templateUrl: './progresscircle.component.html',
@@ -13,7 +13,7 @@ export class ProgresscircleComponent implements AfterViewInit {
   AnimationDuration = 2500
   percentAnimation = 0
   delay = 700
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngAfterViewInit(): void {
     const callback = (entry)=>{
@@ -25,7 +25,6 @@ export class ProgresscircleComponent implements AfterViewInit {
           if(this.percentAnimation >= this.width)clearInterval(Interval)
         },TimeIteration)
       },this.delay - 50)
-
       // 180 / 50 * lo q haya
       const progressValue:HTMLDivElement = this.percent1.nativeElement
       const progressValue2:HTMLDivElement = this.percent2.nativeElement
@@ -52,7 +51,7 @@ export class ProgresscircleComponent implements AfterViewInit {
           {transform: `rotate(${percent}deg)`}
         ],{
           // timing options
-          easing: "ease-in-out",
+          easing: "ease-out",
           duration: this.AnimationDuration / 2,
           iterations: 1,
           fill: 'forwards'

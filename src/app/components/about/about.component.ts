@@ -1,6 +1,6 @@
 import {Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 import{IntersectionObserverService} from "../../services/intersection-observer.service"
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -12,7 +12,7 @@ export class AboutComponent implements AfterViewInit {
   this.barwidth("none")
 }
   screenWidth;
-  constructor(private observerS: IntersectionObserverService) { }
+  constructor(private http: HttpClient, private observerS: IntersectionObserverService) { }
   //Set width of bar depending of the screen size
    barwidth = (entry:any)=> {
      if(entry === "none"|| !entry[0].isIntersecting)return
@@ -38,6 +38,13 @@ export class AboutComponent implements AfterViewInit {
         setTimeout(()=>increment(),7)
       }
       increment()
+    })
+    //sumar en contador de visitas
+    this.http.put("https://contadorvisitasportfolio.herokuapp.com/contador/sumar",{})
+    .subscribe()
+  this.http.get("https://contadorvisitasportfolio.herokuapp.com/contador")
+    .subscribe(data=>{
+      localStorage.setItem("c",JSON.stringify(data))
     })
     this.obs.disconnect()
   }
