@@ -1,0 +1,96 @@
+$heightImg: 350px
+$fontTitle: 'Roboto Slab', serif
+.latestcard
+  height: calc( #{$heightImg} + 20px )
+  border: none
+  width: 100%
+  background: #00000000
+  .hoverlatestcard
+    opacity: 0
+    background: #10151bf3
+    cursor: pointer
+    text-align: center
+    z-index: 2
+    width: 65%
+    height: $heightImg
+    transition: all 0.7s linear
+    .tecnologias
+      padding: 0 25%
+      position: relative
+      top: 15px
+      i
+        color: #04c2c9
+      .textflex2
+        position: relative
+        right: -30px
+    a
+      padding: 18px 33px
+      width: 35%
+      font-size: 1.2rem
+      height: 40px
+      border: 2px solid #04c2c9
+      background: #ffffff
+      font-weight: 500
+      position: relative
+      top: 30px
+      text-decoration: none
+      transition: all linear 0.4s
+    a:hover
+      transition: all linear 0.4s
+      transform: scale(1.1)
+      background: #252934
+      color: #ffffff
+      text-decoration: none
+    .texthover
+      min-height: 70%
+      color: #fff
+      h2
+        font-size: 50px
+        height: 46px
+        color: #04c2c9
+        font-family: $fontTitle
+
+  .hoverlatestcard:hover
+    visibility: visible !important
+    opacity: 1 !important
+    transition: opacity 0.6s linear
+.swiper-container
+  height: $heightImg
+  width: 65% !important
+  position: absolute
+  z-index: 0
+  img
+    height: $heightImg
+    width: 100% !important
+@media (max-width: 920px)
+  .hoverlatestcard , .swiper-container
+    width: 100% !important
+    height: 400px
+
+@media (max-width: 550px)
+  .tecnologias
+    padding: 0 10% !important
+    .textflex2
+        position: relative
+        right: 0px
+  .latestcard
+    height: calc( 200px + 20px )
+  .swiper-container , .hoverlatestcard
+    height: 200px !important
+  .hover
+    h2
+      font-size: 23px !important
+      height: 20px !important
+    h3
+      font-size: 14px !important
+    span
+      font-size: 13px
+    h5
+      font-size: 12px
+      //margin-top: 10px !important
+  a
+    font-size: 14px
+    padding: 10px 15px !important
+    top: 0px !important
+    font-size: 15px !important
+

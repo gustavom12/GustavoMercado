@@ -28,14 +28,13 @@ export class AboutComponent implements AfterViewInit {
       const x = width / 100 * parseFloat(el.dataset.barwidth)
       let percent = 0
       let i = 0
-      console.log(x)
       function increment(){
         if(i >= x) return;
         i++
         el.style.width = `${i}px`
         // percent ++
         // el.parentElement.querySelector("span").innerText = `${percent}%`
-        setTimeout(()=>increment(),7)
+        setTimeout(()=>increment(),1)
       }
       increment()
     })

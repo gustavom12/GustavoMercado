@@ -12,6 +12,7 @@ import{IntersectionObserverService} from "../../services/intersection-observer.s
 export class navbarrComponent implements AfterViewInit {
   constructor(public observerS: IntersectionObserverService) {}
   navbarTitle = "Home"
+  //change title depending on localstorage item
   @HostListener('document: scroll')scroll(){
     if(this.navbarTitle === localStorage.getItem("navbarTitle")){
       return

@@ -11,11 +11,12 @@ export class IntersectionObserverService {
 
     entries.forEach(el => {
       //Change the navbar title when the element is in the view
+      if(!el.isIntersecting){ return }
       if(el.isIntersecting && el.target.classList[0] === "header")title = "Home"
       if(el.isIntersecting && el.target.classList[0] === "quiensoy")title = "Sobre mí"
       if(el.isIntersecting && el.target.classList[0] === "portfoliocontainer")title = "Proyectos"
       if(el.isIntersecting && el.target.classList[0] === "form")title = "Contacto"
-      if(!el.isIntersecting){ return }
+      console.log(title)
       localStorage.setItem("navbarTitle", title)
     });
   }
